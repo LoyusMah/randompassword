@@ -1,4 +1,5 @@
 const passwordBox = document.getElementById("password");
+const btn = document.getElementById("btn");
 const length = 10;
 
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -14,8 +15,8 @@ function createPassword() {
   password += number[Math.floor(Math.random() * number.length)];
   password += symbol[Math.floor(Math.random() * symbol.length)];
   while (length > password.length) {
-    password += allChar[Math.floor(Math.random) * allChar.length];
+    password += allChar[Math.floor(Math.random() * allChar.length)];
   }
   passwordBox.value = password;
 }
-onclick = createPassword();
+btn.addEventListener("click", createPassword);
